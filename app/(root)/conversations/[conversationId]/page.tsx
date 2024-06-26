@@ -1,12 +1,13 @@
 import React from 'react';
+import ConversationContainer from "@/components/shared/conversation/ConversationContainer";
 
 type Props = {};
 
 const Page = (props: Props) => {
     return (
-        <div>
+        <ConversationContainer>
             Conversation Page
-        </div>
+        </ConversationContainer>
     );
 };
 

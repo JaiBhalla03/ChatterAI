@@ -6,6 +6,7 @@ import {UserButton} from "@clerk/clerk-react";
 import Link from "next/link";
 import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
 import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
 
 
 const DesktopNav = () => {
@@ -39,6 +40,11 @@ const DesktopNav = () => {
                                                 variant={path.active ? 'default' : 'outline'}
                                                 className={'bg-transparent'}
                                             >{path.icon}</Button>
+                                            {
+                                                path.count ? (<Badge className={'absolute top-1 left-7 rounded-full w-4 h-4 text-xs bg-[#FF4A09]'}>
+                                                    {path.count}
+                                                </Badge>) : null
+                                            }
                                         </TooltipTrigger>
                                         <TooltipContent>
                                             <p>{path.name}</p>
