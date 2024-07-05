@@ -13,7 +13,7 @@ import {Badge} from "@/components/ui/badge";
 const MobileNav = () => {
     const paths = useNavigation();
     const {isActive} = useConversation();
-    if(!isActive) return null;
+    if(isActive) return null;
     return (
         <Card className={'fixed mx-auto bottom-0 w-[calc(100vw)] flex items-center h-14 p-2 lg:hidden'}>
             <nav className={'w-full'}>

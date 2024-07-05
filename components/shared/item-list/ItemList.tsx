@@ -16,7 +16,7 @@ type Props = React.PropsWithChildren<{
 const ItemList = ({ children, title, action: Action}: Props) => {
     const {isActive} = useConversation();
     return (
-        <div className={cn("hidden w-full h-full lg:flex-none lg:w-80", {
+        <div className={cn("w-full h-full lg:flex-none lg:w-80", {
             "block": isActive,
             "lg:block": !isActive,
         })}>
